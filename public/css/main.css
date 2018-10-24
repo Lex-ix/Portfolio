@@ -1,0 +1,106 @@
+body {
+    margin: 0;
+    background: url('../img/wheat.png');
+}
+
+h1 {
+    margin: 0;
+
+    display: flex;
+    align-items: center;
+}
+
+.container {
+    color: #f0f0f0;
+    font-family: 'Nunito', sans-serif;
+}
+
+header {
+    padding: 20px;
+    margin: 30px 40px;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: -webkit-fill-available;
+
+    /* animation: headerSmallToBig 0.5s linear 1; */
+}
+
+header h1 {
+    font-weight: 500;
+    font-size: 40px;
+    letter-spacing: -4px;
+    font-family: "Segoe UI";
+    text-decoration: underline;
+}
+
+.padding {
+    padding-top: 159px;
+}
+
+@keyframes headerBigToSmall {
+    100% {
+        margin: 0px 40px;
+    }
+}
+
+@keyframes headerSmallToBig {
+    100% {
+        margin: 30px 40px;
+    }
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+.nav li {
+    font-weight: bold;
+    font-size: 20px;
+
+    list-style: none;
+
+    padding-left: 10px;
+
+    vertical-align: middle;
+
+    display: flex;
+    align-items: center;
+}
+.nav {
+    display: flex;
+}
+header .row ul {
+    padding: 0 45px;
+}
+
+.content {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.about img {
+    transform: rotate(3deg);
+    height: 300px;
+    margin-left: 40px;
+
+    border: 12px solid white;
+    border-bottom: 52px solid white;
+
+    animation: wobble 8s linear infinite;
+}
+
+@keyframes wobble {
+    50% {
+        transform: rotate(-1deg);
+    }
+}
+
+input {
+    border: none;
+}
