@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/text/update', 'TextsController@update');
+Route::resource('texts', 'TextsController');
 
 Route::get('/', 'PagesController@showWelcome');
 Route::get('/admin', 'PagesController@showAdmin');

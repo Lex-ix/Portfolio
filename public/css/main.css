@@ -56,6 +56,12 @@ header h1 {
     display: flex;
     justify-content: space-between;
 }
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
 .nav li {
     font-weight: bold;
     font-size: 20px;
@@ -101,6 +107,28 @@ header .row ul {
     }
 }
 
-input {
+input, button {
     border: none;
+}
+
+.button {
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    color: rgba(0,0,0,1);
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.button:hover {
+    background: rgba(255, 255, 255, 1);
+    cursor: pointer;
+}
+
+.button.remove:hover {
+    background: rgba(255, 99, 71, 1);
+}
+
+.button.edit:hover {
+    background: rgb(255, 163, 87);
 }

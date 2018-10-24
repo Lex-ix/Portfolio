@@ -13,9 +13,9 @@ return [
     |
     */
 
-    'name'      => env('APP_NAME', 'Laravel'),
-    'sub_title' => env('APP_SUBTITLE'),
-    'author'    => env('APP_AUTHOR'),
+    'name'      => 'Lex Krooswijk',
+    'sub_title' => 'Website subtitle',
+    'author'    => 'Lex Krooswijk',
 
     /*
     |--------------------------------------------------------------------------

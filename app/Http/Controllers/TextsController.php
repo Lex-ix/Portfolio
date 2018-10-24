@@ -67,15 +67,19 @@ class TextsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(/*Request $request, $id*/)
+    public function update(Request $request, $id)
     {
-        $text = \App\Text::find(1);
+        $title      = $request->title;
+        $content    = $request->content;
 
-        $text->title = 'about_me';
+        $text = \App\Text::find($id);
+
+        $text->title    = $title;
+        $text->content  = $content;
 
         $text->save();
 
-        return $text;
+        return Redirect('/admin');
     }
 
     /**
