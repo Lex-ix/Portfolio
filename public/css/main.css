@@ -118,6 +118,7 @@ input, button {
     color: rgba(0,0,0,1);
     border-radius: 5px;
     font-weight: bold;
+    margin: auto 0;
 }
 
 .button:hover {
@@ -131,4 +132,56 @@ input, button {
 
 .button.edit:hover {
     background: rgb(255, 163, 87);
+}
+
+.button.add:hover {
+    background: rgb(187, 236, 92);
+}
+
+/* MODAL BOX */
+.modal {
+    display: none;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.modal .content {
+    width: 25%;
+    min-width: 350px;
+    height: fit-content;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 25px;
+    border-radius: 8px;
+
+    color: black;
+    background: white;    
+}
+
+.modal span {
+    font-weight: bold;
+}
+
+.modal form input {
+    margin: 10px 0;
+}
+
+.modal form input[type=text] {
+    border: gray 1px solid;
+    border-radius: 5px;
+    padding: 15px;
+}
+
+.modal .close:hover {
+    cursor: pointer;
 }

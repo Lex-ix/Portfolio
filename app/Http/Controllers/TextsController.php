@@ -22,7 +22,7 @@ class TextsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
         //
     }
@@ -36,6 +36,14 @@ class TextsController extends Controller
     public function store(Request $request)
     {
         //
+        $text = new \App\Text;
+
+        $text->title = $request->title;
+        $text->content = $request->content;
+
+        $text->save();
+
+        return Back();
     }
 
     /**
@@ -79,7 +87,8 @@ class TextsController extends Controller
 
         $text->save();
 
-        return Redirect('/admin');
+        // TODO: Redirect with succes message
+        return Back();
     }
 
     /**
@@ -91,5 +100,15 @@ class TextsController extends Controller
     public function destroy($id)
     {
         //
+        $text = \App\Text::find($id);
+
+        if (isset($text)) {
+            $text->delete();
+        } else {
+            // TODO: Return error message
+        }
+
+        // TODO: Redirect with succes message
+        return Back();
     }
 }

@@ -3,9 +3,10 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Text extends Model
 {
     //
-    // protected $primaryKey = 'title';
+    use SoftDeletes;
 }

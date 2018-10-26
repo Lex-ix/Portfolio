@@ -4,6 +4,20 @@ header .row {
 
 header h1 {
     text-decoration: none;
+
+    position: relative;
+}
+
+header h1::after {
+    position: absolute;
+    content: "";
+    background: rgba(222,36,33, 0.9);
+    height: 40%;
+    width: 100%;
+    padding-right: 14px;
+    left: -5px;
+    bottom: 5px;
+    z-index: -1;
 }
 
 td, th {
@@ -13,57 +27,7 @@ td, th {
     padding: 5px 10px;
 }
 
-
-
 td p {
     max-height: 63px;
     overflow: hidden;
-}
-
-/* MODAL BOX EDIT */
-#modalEdit {
-    display: none;
-
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 100vw;
-
-    background: rgba(0, 0, 0, 0.5);
-}
-
-#modalEdit .content {
-    width: 25%;
-    min-width: 350px;
-    height: fit-content;
-    margin: auto;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 25px;
-    border-radius: 8px;
-
-    color: black;
-    background: white;    
-}
-
-#modalEdit span {
-    font-weight: bold;
-}
-
-#modalEdit form input {
-    margin: 10px 0;
-}
-
-#modalEdit form input[type=text] {
-    border: gray 1px solid;
-    border-radius: 5px;
-    padding: 15px;
-}
-
-#modalEdit .close:hover {
-    cursor: pointer;
 }

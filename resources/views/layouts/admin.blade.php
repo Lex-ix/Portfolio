@@ -24,7 +24,7 @@
         <div class="container">
             <header>
                 <div class="row">
-                    <h1>Admin</h1>   
+                    <h1>Armin</h1>   
                 </div>
             </header>
 

@@ -10,6 +10,7 @@ Admin Page | {{ $name }}
     <div class="texts">
         <div class="row">
             <h2>Texts</h2>
+            <button class="button add">Add</button>
         </div>
         <table>
             <tr>
@@ -33,7 +34,7 @@ Admin Page | {{ $name }}
                         </form> -->
                     </td>
                     <td>
-                        <button class="button remove">Remove</button>
+                        <button class="button remove" id="{{ $text->id }}">Remove</button>
                         <!-- <form action="/text/remove">
                             {{ method_field('put') }}
                             {{ csrf_field() }}
@@ -53,14 +54,14 @@ Admin Page | {{ $name }}
         </div>
     </div>
 
-    <div id="modalEdit">
+    <div id="edit" class="modal">
         <div class="content">
             <div class="header row">
                 <p>Editing: <span id="editing"></span></p>
                 <p class="close">Close</p>
             </div>
             <form action="#" method="POST">
-                {{ method_field('put') }}
+                {{ method_field('PUT') }}
                 {{ csrf_field() }}
 
                 <div class="column">
@@ -71,6 +72,43 @@ Admin Page | {{ $name }}
                 <input type="hidden" id="id">
 
                 <input type="submit" value="Update" class="button">
+            </form>
+        </div>
+    </div>
+
+    <div id="remove" class="modal">
+        <div class="content">
+            <div class="header row">
+                <p>Removing: <span class="removing"></span></p>
+                <p class="close">Close</p>
+            </div>
+            <form action="#" method="POST">
+                {{ method_field('DELETE') }}
+                {{ csrf_field() }}
+
+                <p>Are you sure you want to remove <span class="removing"></span></p>
+
+                <input type="hidden" id="id">
+
+                <input type="submit" value="Remove" class="button">
+            </form>
+        </div>
+    </div>
+
+    <div id="add" class="modal">
+        <div class="content">
+            <div class="header row">
+                <p>Add text</p>
+                <p class="close">Close</p>
+            </div>
+            <form action="#" method="POST">
+                {{ csrf_field() }}
+                <div class="column">
+                    <input type="text" placeholder="Title" name="title">
+                    <input type="text" placeholder="Content" name="content">
+                </div>
+
+                <input type="submit" value="Add" class="button">
             </form>
         </div>
     </div>
