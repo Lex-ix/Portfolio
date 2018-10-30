@@ -8,18 +8,6 @@ header h1 {
     position: relative;
 }
 
-header h1::after {
-    position: absolute;
-    content: "";
-    background: rgba(222,36,33, 0.9);
-    height: 40%;
-    width: 100%;
-    padding-right: 14px;
-    left: -5px;
-    bottom: 5px;
-    z-index: -1;
-}
-
 td, th {
     min-width: 50px;
     text-align: center;
@@ -31,3 +19,4 @@ td p {
     max-height: 63px;
     overflow: hidden;
 }
+

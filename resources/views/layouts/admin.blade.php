@@ -11,6 +11,7 @@
 
         <!-- Scripts -->
         <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+        <script src="{{ asset('js/main.js') }}"></script>
         <script src="{{ asset('js/admin.js') }}"></script>
 
         <!-- Fonts -->
@@ -21,10 +22,10 @@
         <link rel="stylesheet" href="{{ asset('css/admin.css') }}">
     </head>
     <body>
-        <div class="container">
+        <div class="container wrapper">
             <header>
                 <div class="row">
-                    <h1>Armin</h1>   
+                    <h1 class="line">Admin<a href="/">(Home)</a></h1>
                 </div>
             </header>
 

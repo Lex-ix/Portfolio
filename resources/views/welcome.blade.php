@@ -18,6 +18,18 @@ Admin Page | {{ $name }}
         <h2>Contact me</h2>
         <p>{{ $contactMeContent }}</p>
     </div>
+
+    <div class="about">
+        <h2>About me</h2>
+        <div class="row">
+            <p>{{ $aboutMeContent }}</p>
+            <img src="{{ asset('img/IMG_0110.jpg') }}" alt="">
+        </div>
+    </div>
+    <div class="contact">
+        <h2>Contact me</h2>
+        <p>{{ $contactMeContent }}</p>
+    </div>
 @endsection
 
 <!--

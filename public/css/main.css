@@ -10,12 +10,26 @@ h1 {
     align-items: center;
 }
 
+header h1.line::after {
+    position: absolute;
+    content: "";
+    background: rgba(222,36,33, 0.9);
+    height: 40%;
+    width: 100%;
+    padding-right: 14px;
+    left: -5px;
+    bottom: 5px;
+    z-index: -1;
+}
+
 .container {
     color: #f0f0f0;
     font-family: 'Nunito', sans-serif;
 }
 
 header {
+    z-index: 100;
+
     padding: 20px;
     margin: 30px 40px;
 
@@ -24,8 +38,43 @@ header {
     left: 0;
 
     width: -webkit-fill-available;
+}
 
-    /* animation: headerSmallToBig 0.5s linear 1; */
+header.small {
+    animation: scrollUp 0.2s;
+}
+
+header.stick {
+    animation: scrollDown 0.2s;
+
+    margin: 0;
+
+    background: rgba(0,0,0,1);
+
+}
+
+@keyframes scrollDown {
+    0% {
+        margin: 30px 40px;
+        background: none;
+    }
+
+    100% {
+        margin: 0;
+        background: #000;
+    }
+}
+
+@keyframes scrollUp {
+    0% {
+        margin: 0;
+        background: #000;
+    }
+
+    100% {
+        margin: 30px 40px;
+        background: none;
+    }
 }
 
 header h1 {
@@ -38,18 +87,6 @@ header h1 {
 
 .padding {
     padding-top: 159px;
-}
-
-@keyframes headerBigToSmall {
-    100% {
-        margin: 0px 40px;
-    }
-}
-
-@keyframes headerSmallToBig {
-    100% {
-        margin: 30px 40px;
-    }
 }
 
 .row {

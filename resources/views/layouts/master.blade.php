@@ -9,6 +9,10 @@
 
         <title>@yield('page-title')</title> 
 
+        <!-- Scripts -->
+        <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+        <script src="{{ asset('js/main.js') }}"></script>
+
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet" type="text/css">
 
@@ -24,7 +28,7 @@
                         <li>About</li>
                         <li>Contact</li>
                     </ul> 
-                    <h1>{{ $name }}</h1>   
+                    <h1>{{ $name }}<a href="/admin">(Admin)</a></h1>   
                     <ul class="nav">
                         <li>Home</li>
                         <li>About</li>

@@ -59,7 +59,6 @@ $(document).ready(() => {
 
         $('.modal#add form').attr('action', '/texts')
     });
-
     
     $('.modal#add .close').click(() => {
         $('.modal#add').css('display', 'none');
